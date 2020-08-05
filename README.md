@@ -9,6 +9,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ### screen 2
 ![alt text](https://github.com/Ashwini-R/appiness-machine-task-ashwini/blob/master/screenshots/screen-2.jpeg)
 
+## Additional Dependencies
+### bootstrap
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
