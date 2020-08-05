@@ -1,6 +1,13 @@
-# Appimess
+# Appiness
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.2.
+
+## Screens
+### screen 1
+![alt text](https://github.com/Ashwini-R/appiness-machine-task-ashwini/blob/master/screenshots/screen-1.jpeg)
+
+### screen 2
+![alt text](https://github.com/Ashwini-R/appiness-machine-task-ashwini/blob/master/screenshots/screen-2.jpeg)
 
 ## Development server
 
