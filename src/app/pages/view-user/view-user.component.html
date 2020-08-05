@@ -1,0 +1,75 @@
+<div class="col-12">
+  <div class="text-center p-3 mt-3 boxShadowForBox container">
+    <div class="col-12 row m-0 p-0">
+      <div class="col-2 p-0">
+        <img class="avatarImageStyle" src="{{userDetails.avatar_url}}" alt="">
+      </div>
+      <div class="col-10">
+        <div class="col-12 text-left">
+          <span class="userNameStyle">{{userDetails.login}}</span>
+        </div>
+        <div class="col-12  text-left">
+          <div class="col-12 row" *ngIf="userDetails.name">
+            <p class="followersAndFollowings">
+              {{userDetails.name}}
+          </div>
+          <div class="col-12 row">
+            <div>
+              <p class="followersAndFollowings"><span class="countStyle">{{userDetails.public_repos}}</span> public
+                repos
+              </p>
+            </div>
+            <div>
+              <p class="followersAndFollowings ml-4"><span class="countStyle">{{userDetails.followers}}</span> followers
+              </p>
+            </div>
+            <div>
+              <p class="followersAndFollowings ml-4"><span class="countStyle">{{userDetails.following}}</span> following
+              </p>
+            </div>
+          </div>
+          <div class="col-12 row" *ngIf="userDetails.location">
+            <p class="followersAndFollowings"><i class="fa fa-map-marker" aria-hidden="true"></i>
+              {{userDetails.location}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container text-left mt-4 p-0">
+    <span class="repositoriesHeading">Repositories</span>
+  </div>
+  <div class="container p-0" *ngIf="repositoryDetails.length > 0">
+    <div class="row m-0 p-0 ">
+      <div class="col-lg-6 col-md-8 col-sm-12" *ngFor="let repo of repositoryDetails; let i = index">
+        <div class="text-center p-3 mt-3 boxShadowForBox">
+          <div class="col-12 text-left">
+            <span class="repoNameStyle">{{repo.name}}</span>
+          </div>
+          <div class="col-12">
+            <div class="col-12 row">
+              <div>
+                <p class="followersAndFollowings"><i class="fa fa-star" aria-hidden="true"></i>
+                  {{ repo.stargazers_count }}
+                </p>
+              </div>
+              <div>
+                <p class="followersAndFollowings "><span class="countStyle ml-4">{{repo.watchers_count}}</span>
+                  wathcers
+                </p>
+              </div>
+              <div>
+                <p class="followersAndFollowings "><i class="fa fa-code-fork ml-4" aria-hidden="true"></i>
+                  {{repo.watchers_count}}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container p-0 text-center" *ngIf="repositoryDetails.length == 0">
+    <span class="noRepositories">No repositories</span>
+  </div>
